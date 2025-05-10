@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import FeaturedCars from "../components/home/FeaturedCars";
+import HowItWorks from "../components/home/HowItWorks";
+import WhyChooseUs from "../components/home/WhyChooseUs";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import CarCard from "@/components/cars/CarCard";
@@ -80,12 +82,18 @@ const Home = () => {
         </Carousel>
       </section>
 
+      {/* How It Works Section */}
+      <HowItWorks />
+
       {/* Featured Cars Section */}
       <FeaturedCars />
 
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
       {/* Testimonials Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl xl:max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900">
               What Our Customers Say
