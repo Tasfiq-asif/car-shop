@@ -23,9 +23,9 @@ const FeaturedCars = () => {
           response.data.data &&
           response.data.data.length > 0
         ) {
-          // Get all cars and randomly select 3
+          // Get all cars and randomly select 4
           const allCars = response.data.data;
-          const randomCars = getRandomCars(allCars, 3);
+          const randomCars = getRandomCars(allCars, 4);
           setFeaturedCars(randomCars);
         }
       } catch (err) {
@@ -60,7 +60,7 @@ const FeaturedCars = () => {
         <LoadingOverlay isLoading={loading} text="Loading featured cars..." />
       )}
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl xl:max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900">Featured Cars</h2>
           <p className="mt-4 text-xl text-gray-600">
@@ -69,7 +69,7 @@ const FeaturedCars = () => {
           {error && <p className="mt-2 text-red-500">{error}</p>}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {featuredCars.map((car) => (
             <div key={car._id}>
               <FeaturedCarCard car={car} onViewDetails={handleCarClick} />
